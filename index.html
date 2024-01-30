@@ -1,0 +1,78 @@
+<!-- configurações  (atalho html:5) -->
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- incluir aqui o idioma-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- incluindo a fonte da letra  roboto  -->
+    <link rel="stylesheet" href="./style.css"> <!-- chamando o css (atalho link:css)-->
+    <title>Conversor de moedas</title> <!-- incluir aqui o titulo do site -->
+</head>
+
+<body>
+    <img class="logo" src="./assets/money.png" alt="logo-conversor-de-moedas"> <!-- Inserimos aqui a imagem do logo -->
+
+    <main> <!-- Parte principal do site -->
+
+        <label> <!-- usada para criar um rótulo para um elemento -->
+            Converter <b> de: </b>
+
+            <select>
+                <!-- é usada para criar um menu suspenso, onde o usuário pode escolher uma única opção dentre as listadas -->
+
+                <option> <!-- aqui iniciamos a inclusão das opções que o usuario tera para selecionar -->
+                    R$ Real Brasileiro
+                </option>
+
+            </select>
+
+        </label>
+
+        <label> <!-- usada para criar um rótulo para um elemento -->
+            Converter <b>para:</b>
+
+            <select class="currency-select">
+                <!-- é usada para criar um menu suspenso, onde o usuário pode escolher uma única opção dentre as listadas -->
+                <option value="dolar"> US$ Dólar </option>
+                <option value="euro"> € Euro </option>
+                <option value="libra"> £ Libra</option>
+            </select>
+
+        </label>
+
+        <label> <!-- usada para criar um rótulo para um elemento -->
+            Valor que deseja converter
+            <input class="input-currency" placeholder="R$ 10.000,00 ">
+            <!-- o input permite coletar dados / e o placeholder define um texto de sugestão exibido dentro do campo de entrada-->
+
+        </label>
+
+        <button class="convert-button"> Converter </button>
+        <!-- cria um elemento na página que, ao ser clicado, aciona um determinado evento -->
+
+        <section>
+            <!-- utilizado para agrupar conteúdo logicamente relacionado dentro de uma página, formando uma seção  -->
+            <div class="currency-box">
+                <img class="moedabrasil" src="./assets/real.png" alt="logo_moeda-a-converter" />
+                <p class="currency"> Real </p>
+                <p class="currency-value-to-convert"> R$ 0,00 </p>
+            </div>
+
+            <img class="arrow-img" src="./assets/seta.png" alt="seta" />
+
+            <div class="currency-box">
+                <img class="currency-img" src="./assets/dolar.png" alt="logo_moeda-convertida" />
+                <p class="currency" id="currency-name"> Dólar  </p>
+                <p class="currency-value"> US$ 0.00 </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts.js"></script> <!-- chamando o javascript (atalho script:src)-->
+</body>
+
+</html>

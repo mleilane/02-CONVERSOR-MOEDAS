@@ -1,0 +1,182 @@
+/* */
+/*estilos globais  */
+* {
+    margin: 0;
+    /*define a área de margem ao redor de um elemento, controla o espaço fora da borda */
+    padding: 0;
+    /* define o espaço dentro da borda, entre o conteúdo do elemento e a própria borda*/
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    /* retira a linha azul que aparece nos elementos do select*/
+}
+
+body {
+    background-image: linear-gradient(to bottom, #000000, #FAA828)
+        /* fundo com gradiente de cima para baixo */
+}
+
+.logo {
+    /* usamos o ponto ( . )  para acessar um elemento pela classe  */
+
+    width: 300px;
+    /* ajustando a largura */
+    display: block;
+    /* faz o elemento ocupar toda a linha */
+    margin: 20px auto;
+    /*Margem - o 1º elemento ajusta a margem a cima e baixo e o 2º dos lados  */
+
+}
+
+
+main {
+
+    width: 375px;
+    /* ajustando a largura */
+    background: #f4f4f4;
+    /* altera a cor do fundo */
+    border-radius: 20px;
+    /*usada para definir o arredondamento das bordas de um elemento */
+    margin: 0 auto 40px;
+    /*Margem - o 1º elemento ajusta a margem a cima e baixo, 2º dos lados, 3º em baixo  */
+    padding: 44px 24px 23px;
+    /* vai ajustar o elemento de dentro para fora*/
+    /* padding: 44px; aplica para os 4 lados*/
+    /* padding: 44px 24px; 1º em cima e em baixo, e o 2º dos lados*/
+    /* padding: 44px 24px 23px; 1º em cima, 2º dos lados, 3º em baixo */
+    /* padding: 44px 24px 23px 25px; 1º em cima, 2º a direita, 3º baixo, 4º esquerda*/
+
+}
+
+label {
+    color: #777777; /*altera a cor do texto */
+    font-weight: 400; /*define a espessura da fonte */
+    font-size: 14px; /*define o tamanho da letra  */
+
+}
+
+select,
+input {
+    background: #FFFFFF; /* cor de fundo */
+    border: 1px solid #BBBBBB; /*define as bordas do elemento*/
+    border-radius: 4px; /* arredondamento dos cantos da borda  */
+    height: 48px; /* altura do elemento*/
+    width: 100%;   /* ocupa toda a largura disponivel */
+    margin-bottom: 24px; /* controla a margem inferior de um elemento*/
+    appearance: none; /* retira a setinha que aparece no elemento select*/
+    padding-left: 18px; /* define o espaço interno à esquerda de um elemento*/
+    font-weight: 700; /*define a espessura da fonte */
+    font-size: 16px; /*define o tamanho da letra  */ 
+    color: #555555; /*altera cor do texto */
+    cursor: pointer; /*altea  o tipo do cursor*/
+
+}
+
+input {
+    cursor: auto; /* */
+}
+
+.convert-button {
+    background: #000000;
+    border-radius: 8px;
+    width: 100%;
+    height: 48px;
+    border: none;
+    color: #ffffff;
+    /*cor do texto */
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    opacity: 0.8; /* atribui  opacidade de 80% ao elemento botão, quando o usuario passar o mouse sobre ele*/
+}
+
+button:active {
+    opacity: 0.6; /*atribui opacidade de 60% ao elemento botão quando ele esta sendo pressionado  */
+
+}
+
+section {
+    border: 1px solid #000000;
+    border-radius: 18px;
+    margin-top: 36px;
+    padding: 12px;
+    display: flex;
+    /* permite escolher se os elementos vão ficar um do lado do outro ou abaixo*/
+    flex-direction: column;
+    /* permite escolher a direção dos elementos - colunas ou linhas */
+    align-items: center;
+}
+
+.moedabrasil,
+.currency-img,
+p {
+    display: inline-block; 
+}
+
+.moedabrasil {
+    transform: translateX(-10px); /* movimenta o elemento 10pixels a esquerda */
+    
+}
+
+
+.arrow-img {
+    margin: 15px 0;
+
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: row; /*determina como os itens flexíveis são organizados, horizontalmente (linha) ou verticalmente (coluna)  */
+    align-items: center; /*alinha o elemento ao centro */
+    gap: 4px;     /* distancia entre os itens */
+}
+
+.currency {
+    color: #777777;
+    font-size: 14px;
+}
+
+.currency-value, .currency-value-to-convert {
+    color: #555555;
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+/* iniciando a responsividade   */
+@media screen and (max-width:1000px) {
+    body {
+        width: 100%;
+
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+
+    @media screen and (max-width: 540px) {
+
+        body {
+            width: 100%;
+
+        }
+
+        main {
+            width: 70%;
+        }
+
+        .logo {
+            max-width: 180px;
+        }
+    }
+
+}
